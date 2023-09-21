@@ -1,17 +1,20 @@
 {
   "name": "rusguard-soap-client",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "This package lets you connect to RusGuard web services using SOAP.",
+  "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "start": "ts-node index.ts",
     "example": "ts-node example/index.ts",
+    "build:types": "tsc --project ./tsconfig.types.json",
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["rusguard"],
+  "author": "mikl.night",
   "license": "MIT",
+  "files": ["dist"],
   "dependencies": {
     "soap": "^1.0.0"
   },

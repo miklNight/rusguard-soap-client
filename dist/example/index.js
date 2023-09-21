@@ -5,7 +5,7 @@ const src_1 = require("../src");
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const username = 'admin';
 const password = 'password';
-const url = 'https://192.168.111.1/LNetworkServer/LNetworkService.svc?wsdl';
+const url = 'https://192.168.1.1/LNetworkServer/LNetworkService.svc?wsdl';
 (0, src_1.CustomRusGuard)(url, username, password).then((skud) => {
     skud.getAssignedAcsKeyByKeyNumber("112233")
         .then((response) => {
