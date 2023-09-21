@@ -1,17 +1,32 @@
-## Node.JS SOAP Client RusGuard Soft + Custom functions
-https://www.rgsec.ru/rusguard-soft
+# RusGuard SOAP Client 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://mit-license.org) 
 
-this package use https://www.npmjs.com/package/soap to connect LNetworkServer
+> A SOAP client for RusGuard 3.3.1
+
+This package lets you connect to RusGuard web services using SOAP.
+
+- [Install](#install)
+- [Usage:](#Usage)
+
+## Install
+
+```
+  npm install soap
+```
+
 
 ## Usage
 
 in my case need disable ssl
+
 ````
+import {CustomRusGuard} from "rusguard-soap-client";
+
 //disable ssl warning
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
-const username = 'Admin';
-const password = 'Password';
+const username = 'admin';
+const password = 'password';
 const url = 'http://192.168.1.1/LNetworkServer/LNetworkService.svc?wsdl';
 ````
 
@@ -47,3 +62,14 @@ CustomRusGuard(url, username, password).then((skud) => {
         .catch((e) => console.log("ERR!", e))
 });
 ```
+
+
+Custom functions list
+````
+addEmployee,
+updateEmployee,
+removeEmployee,
+assignKey,
+getAssignedAcsKeyByKeyNumber,
+setKeyIsLost
+````

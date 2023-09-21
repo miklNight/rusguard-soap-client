@@ -1,7 +1,10 @@
 import {Client} from "soap";
+
 /**
+ * Based on RusGuard 3.3.1
  * LNetworkServer/LNetworkService.svc?wsdl
  * */
+
 export interface IRusGuardClient extends Client {
     GetEmployeePostionsForAlcoGroup?: (data: unknown, Callback) => void;
     GetEmployeePostionsForAlcoGroupAsync?: (data: unknown, Callback) => void;
